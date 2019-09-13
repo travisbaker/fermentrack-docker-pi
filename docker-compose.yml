@@ -1,0 +1,13 @@
+version: "2"
+services:
+    fermentrack:
+        image: travisbaker/fermentrack-docker-pi
+        container_name: fermentrack
+        ports: 
+            - 8890:80
+        volumes:
+            - "~/fermentrack/data:/home/fermentrack/fermentrack/data"
+            - "~/fermentrack/db.sqlite3:/home/fermentrack/fermentrack/db.sqlite3"
+        devices:
+            - /dev/ttyACM0:/dev/ttyACM0
+        restart: always
