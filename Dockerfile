@@ -1,4 +1,4 @@
-FROM resin/rpi-raspbian:stretch
+FROM balenalib/rpi-raspbian:stretch
 LABEL maintainer="https://github.com/travisbaker"
 EXPOSE 80
 RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" \
