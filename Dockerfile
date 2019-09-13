@@ -1,5 +1,5 @@
 FROM resin/rpi-raspbian:stretch
-MAINTAINER Travis Baker
+LABEL maintainer="https://github.com/travisbaker"
 EXPOSE 80
 RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" \
   && apt-get install --no-install-recommends -y \
