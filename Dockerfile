@@ -1,8 +1,8 @@
 FROM balenalib/rpi-raspbian:stretch
 LABEL maintainer="https://github.com/travisbaker"
 EXPOSE 80
-RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" \
-  && apt-get install --no-install-recommends -y \
+RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" 
+RUN apt-get install --no-install-recommends -y \
   apache2-utils \
   build-essential \
   cron \
@@ -11,7 +11,8 @@ RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" \
   git \
   initscripts \
   iproute \
-  login \
+  login 
+RUN apt-get install --no-install-recommends -y \
   php7.0-fpm \
   php7.0-mbstring \
   php7.0-xml \
