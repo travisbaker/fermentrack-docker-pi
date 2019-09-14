@@ -1,8 +1,8 @@
-FROM balenalib/rpi-raspbian:latest
+FROM balenalib/rpi-raspbian:stretch
 LABEL maintainer="https://github.com/travisbaker"
 EXPOSE 80
-RUN apt-get update; exit 0
-# RUN apt-get upgrade -y -o Dpkg::Options::="--force-confold" 
+RUN apt-get update
+RUN apt-get upgrade -y -o Dpkg::Options::="--force-confold" 
 RUN apt-get install --no-install-recommends -y \
   apache2-utils \
   build-essential \
