@@ -1,4 +1,4 @@
-FROM balenalib/rpi-raspbian:stretch
+FROM balenalib/rpi-raspbian:latest
 LABEL maintainer="https://github.com/travisbaker"
 EXPOSE 80
 RUN apt-get update; exit 0
